@@ -5,7 +5,7 @@
     <title>Гостиницы Седоны</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body>
+  <body class="page-body">
     <header class="page-header">
       <nav class="header-nav">
         <a class="logo" href="index.html">
@@ -107,7 +107,7 @@
               </ul>
             </fieldset>
 
-            <fieldset class="filter-fieldset">
+            <fieldset class="filter-fieldset filter-fieldset-price">
               <legend class="filter-title">Стоимость, ₽:</legend>
 
               <div class="range">
@@ -144,45 +144,49 @@
 
       <section class="catalog">
         <h2 class="visually-hidden">Результаты поиска</h2>
-        <p class="section-title">Найдено гостиниц: 38</p>
 
-        <h3 class="visually-hidden">Сортировка и отображение</h3>
-        <details class="select">
-          <summary class="select-button">Сначала дешёвые</summary>
+        <div class="catalog-sort">
+          <p class="section-title catalog-title">Найдено гостиниц: 38</p>
 
-          <ul class="select-menu">
-            <li class="select-item select-item-active">
-              <a class="select-option" href="#">Сначала дешёвые</a>
+          <!--временно добавим атрибут hidden, чтобы заголовок не рушил сетку-->
+          <h3 class="visually-hidden" hidden>Сортировка и отображение</h3>
+          <details class="select catalog-select">
+            <summary class="select-button">Сначала дешёвые</summary>
+
+            <ul class="select-menu">
+              <li class="select-item select-item-active">
+                <a class="select-option" href="#">Сначала дешёвые</a>
+              </li>
+              <li class="select-item">
+                <a class="select-option" href="#">Сначала дорогие</a>
+              </li>
+              <li class="select-item">
+                <a class="select-option" href="#">Сначала популярные</a>
+              </li>
+              <li class="select-item">
+                <a class="select-option" href="#">Сначала комфортные</a>
+              </li>
+            </ul>
+          </details>
+
+          <ul class="view">
+            <li class="view-item view-item-active">
+              <a class="view-link">
+                <span class="visually-hidden">Карточками</span>
+              </a>
             </li>
-            <li class="select-item">
-              <a class="select-option" href="#">Сначала дорогие</a>
+            <li class="view-item">
+              <a class="view-link" href="#">
+                <span class="visually-hidden">Слайдами</span>
+              </a>
             </li>
-            <li class="select-item">
-              <a class="select-option" href="#">Сначала популярные</a>
-            </li>
-            <li class="select-item">
-              <a class="select-option" href="#">Сначала комфортные</a>
+            <li class="view-item">
+              <a class="view-link" href="#">
+                <span class="visually-hidden">Списком</span>
+              </a>
             </li>
           </ul>
-        </details>
-
-        <ul class="view">
-          <li class="view-item view-item-active">
-            <a class="view-link">
-              <span class="visually-hidden">Карточками</span>
-            </a>
-          </li>
-          <li class="view-item">
-            <a class="view-link" href="#">
-              <span class="visually-hidden">Слайдами</span>
-            </a>
-          </li>
-          <li class="view-item">
-            <a class="view-link" href="#">
-              <span class="visually-hidden">Списком</span>
-            </a>
-          </li>
-        </ul>
+        </div>
 
         <h3 class="visually-hidden">Список гостиниц</h3>
 
@@ -281,49 +285,52 @@
         <div class="pagination">
           <button class="button button-large" type="button">Загрузить ещё</button>
 
-          <h3 class="visually-hidden">Список страниц</h3>
-          <ul class="pagination-list">
-            <li class="pagination-item pagination-item-active">
-              <a class="pagination-link">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">4</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">...</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">10</a>
-            </li>
-          </ul>
+          <div class="pagination-nav">
+            <!--временно добавим атрибут hidden, чтобы заголовок не рушил сетку-->
+            <h3 class="visually-hidden" hidden>Список страниц</h3>
+            <ul class="pagination-list">
+              <li class="pagination-item pagination-item-active">
+                <a class="pagination-link">1</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">2</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">3</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">4</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">...</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">10</a>
+              </li>
+            </ul>
 
-          <div class="pagination-select">
-            <p>Гостиниц на странице:</p>
+            <div class="pagination-select">
+              <p>Гостиниц на странице:</p>
 
-            <details class="select">
-              <summary class="select-button">4</summary>
+              <details class="select">
+                <summary class="select-button">4</summary>
 
-              <ul class="select-menu">
-                <li class="select-item select-item-active">
-                  <a class="select-option" href="#">5</a>
-                </li>
-                <li class="select-item">
-                  <a class="select-option" href="#">6</a>
-                </li>
-                <li class="select-item">
-                  <a class="select-option" href="#">9</a>
-                </li>
-                <li class="select-item">
-                  <a class="select-option" href="#">12</a>
-                </li>
-              </ul>
-            </details>
+                <ul class="select-menu">
+                  <li class="select-item select-item-active">
+                    <a class="select-option" href="#">5</a>
+                  </li>
+                  <li class="select-item">
+                    <a class="select-option" href="#">6</a>
+                  </li>
+                  <li class="select-item">
+                    <a class="select-option" href="#">9</a>
+                  </li>
+                  <li class="select-item">
+                    <a class="select-option" href="#">12</a>
+                  </li>
+                </ul>
+              </details>
+            </div>
           </div>
         </div>
       </section>
@@ -343,7 +350,7 @@
     </main>
 
     <footer class="page-footer">
-      <ul class="page-footer-social social">
+      <ul class="footer-social social">
         <li class="social-item">
           <a class="social-link" href="https://twitter.com/htmlacademy_ru">
             <span class="visually-hidden">Twitter</span>

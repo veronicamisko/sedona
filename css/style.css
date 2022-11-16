@@ -17,11 +17,114 @@
 /* Common */
 
 .page {
+  height: 100%;
+
   color: #333333;
+  background-color: #F2F2F2;
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
 }
+
+.page-body {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  min-height: 100%;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+}
+
+.page-main {
+  flex-grow: 1;
+}
+
+/* Header */
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 72px;
+}
+
+.site-menu {
+  margin: 0;
+  padding: 0;
+
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.site-menu-link {
+  color: #000000;
+
+  text-decoration: none;
+}
+
+/* Footer */
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 72px;
+}
+
+.footer-social {
+  margin: 0;
+}
+
+.footer-phone {
+  color: #000000;
+
+  font-size: 40px;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+/* Main */
+
+.main-promo {
+  min-height: 485px;
+
+  background-color: #83B3D3;
+  background-image: url("../images/background/promo.jpg");
+}
+
+.main-header {
+  padding: 35px 72px 80px;
+
+  color: #ffffff;
+  background-color: #83B3D3;
+  background-image: url("../images/background/main-header.jpg");
+  background-size: cover;
+}
+
+.main-heading {
+  margin: 0;
+
+  font-size: 60px;
+  line-height: 78px;
+}
+
+/* Section */
+
+.section-title {
+  color: #000000;
+
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.section-description {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+/* Button */
 
 .button {
   color: #ffffff;
@@ -40,64 +143,6 @@
 
 .button-large {
   font-size: 20px;
-}
-
-/* Header */
-
-.site-menu {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 700;
-}
-
-.site-menu-link {
-  color: #000000;
-
-  text-decoration: none;
-}
-
-/* Footer */
-
-.footer-phone {
-  color: #000000;
-
-  font-size: 40px;
-  line-height: 40px;
-  text-decoration: none;
-}
-
-/* Main */
-
-.main-header {
-  color: #ffffff;
-  background-color: #83B3D3;
-  background-image: url("../images/background/main-header.jpg");
-  background-size: cover;
-}
-
-.main-heading {
-  font-size: 60px;
-  line-height: 78px;
-}
-
-.breadcrumbs {
-  font-size: 16px;
-}
-
-/* Section */
-
-.section-title {
-  color: #000000;
-
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 36px;
-  text-transform: uppercase;
-}
-
-.section-description {
-  font-size: 22px;
-  line-height: 26px;
 }
 
 /* Forms */
@@ -123,6 +168,15 @@
   opacity: 0.3;
 }
 
+/* Breadcrumbs */
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+}
+
 /* Card */
 
 .card-title {
@@ -141,18 +195,16 @@
   text-transform: uppercase;
 }
 
-/* Pagination */
+/* Advantages */
 
-.pagination-link {
-  color: #ffffff;
-  background-color: #83B3D3;
-
-  font-size: 20px;
-  font-weight: 700;
-  text-decoration: none;
+.advantages {
+  text-align: center;
 }
 
-/* Advantages */
+.advantages-list {
+  margin: 0;
+  padding: 0;
+}
 
 .advantages-list-inner {
   color: #333333;
@@ -192,7 +244,17 @@
   line-height: 21px;
 }
 
+/* Search */
+
+.search {
+  text-align: center;
+}
+
 /* Subscribe */
+
+.subscribe {
+  text-align: center;
+}
 
 .subscribe-primary .section-title {
   color: #ffffff;
@@ -205,7 +267,17 @@
   background-size: cover;
 }
 
+/* Social */
+
+.social {
+  padding: 0;
+}
+
 /* Filter */
+
+.filter-form {
+  display: flex;
+}
 
 .filter-title {
   font-size: 20px;
@@ -213,10 +285,88 @@
   line-height: 26px;
 }
 
+.filter-fieldset {
+  width: 200px;
+  margin: 0;
+  margin-right: 17px;
+  padding: 0;
+}
+
+.filter-fieldset-price {
+  width: 287px;
+  margin-left: 95px;
+}
+
+.filter-list {
+  margin: 0;
+  padding: 0;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  margin-left: 64px;
+}
+
 .filter-reset {
+  align-self: center;
+
   color: #ffffff;
   background-color: transparent;
 
   font-family: inherit;
   font-size: 18px;
+}
+
+/* Catalog */
+
+.catalog {
+  padding: 0 72px;
+}
+
+.catalog-sort {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-title {
+  width: 50%;
+  margin: 0;
+}
+
+.catalog-select {
+  width: 287px;
+  margin-right: auto;
+}
+
+.view {
+  margin: 0;
+  padding: 0;
+}
+
+/* Pagination */
+
+.pagination-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-link {
+  color: #ffffff;
+  background-color: #83B3D3;
+
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pagination-select {
+  display: flex;
 }
